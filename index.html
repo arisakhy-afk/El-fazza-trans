@@ -41,11 +41,10 @@
                 <a href="#pesan-tiket" class="hover:text-orange-300 transition">Pesan Tiket</a>
                 <a href="#layanan" class="hover:text-orange-300 transition">Layanan</a>
                 <a href="#rute" class="hover:text-orange-300 transition">Rute Kota</a>
-                <a href="#armada" class="hover:text-orange-300 transition">Armada</a>
                 <a href="#rekening" class="hover:text-orange-300 transition">Info Rekening</a>
                 <a href="#kontak" class="hover:text-orange-300 transition">Kontak</a>
             </nav>
-            <a href="https://wa.me/6285869133332?text=Halo%20EL%20FAZZA%20TRANS,%20saya%20ingin%20tanya%20harga" target="_blank" class="bg-orangebrand hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-lg text-xs md:text-sm shadow transition flex items-center gap-2">
+            <a href="https://wa.me/6285869133332?text=Halo%20EL%20FAZZA%20TRANS,%20saya%20ingin%20tanya%20jadwal" target="_blank" class="bg-orangebrand hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-lg text-xs md:text-sm shadow transition flex items-center gap-2">
                 <i class="fab fa-whatsapp"></i> Hubungi Kami
             </a>
         </div>
@@ -60,7 +59,7 @@
                 <p class="text-sky-100 text-base md:text-lg mb-6 font-medium">TRAVEL • CARTER (PP) • WISATA • KIRIM PAKET KILAT</p>
                 <div class="flex flex-col sm:flex-row gap-3">
                     <a href="#pesan-tiket" class="bg-orangebrand hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg text-center transition flex items-center justify-center gap-2">
-                        <i class="fas fa-ticket-alt"></i> Cek Tarif & Pesan Tiket
+                        <i class="fas fa-ticket-alt"></i> Pesan Tiket & DP Online
                     </a>
                     <a href="#rute" class="bg-white text-sky-700 hover:bg-sky-50 font-bold px-6 py-3 rounded-xl shadow text-center transition">
                         Cek Rute Tujuan
@@ -77,14 +76,14 @@
         </div>
     </section>
 
-    <!-- FORMULIR PEMESANAN SPESIFIK & HITUNG AUTOMATIS -->
+    <!-- FORMULIR PEMESANAN DENGAN PENJEMPUTAN & TUJUAN SPESIFIK -->
     <section id="pesan-tiket" class="py-12 bg-white relative -mt-6 z-30">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-sky-100">
                 <div class="text-center mb-6">
-                    <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Formulir Booking Tiket</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-sky-900 mt-2">Pilih Rute Spesifik & Hitung DP</h2>
-                    <p class="text-xs md:text-sm text-gray-500">Pilih rute perjalanan Anda untuk melihat estimasi harga total dan DP tanda jadi</p>
+                    <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Formulir Pemesanan</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-sky-900 mt-2">Isi Detail Perjalanan Anda</h2>
+                    <p class="text-xs md:text-sm text-gray-500">Silakan isi alamat penjemputan & tujuan spesifik Anda di bawah ini</p>
                 </div>
 
                 <form id="formTravel" onsubmit="kirimFormWA(event)" class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -97,7 +96,7 @@
                     <!-- Jenis Layanan -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Jenis Layanan *</label>
-                        <select id="layanan_tipe" onchange="hitungTarif()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
+                        <select id="layanan_tipe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
                             <option value="Travel Reguler (Door to Door)">Travel Reguler (Door to Door)</option>
                             <option value="Carter Mobil (PP)">Carter Mobil (PP)</option>
                             <option value="Paket Wisata">Paket Wisata</option>
@@ -105,24 +104,16 @@
                         </select>
                     </div>
 
-                    <!-- Detail Alamat Penjemputan -->
+                    <!-- LOKASI PENJEMPUTAN SPESIFIK -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Alamat Penjemputan Detail *</label>
-                        <input type="text" id="lokasi_jemput" required placeholder="Contoh: Gentasari Kroya / Sampang / Cilacap Kota" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+                        <label class="block text-xs font-bold text-slate-700 mb-1"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Alamat / Lokasi Penjemputan Spesifik *</label>
+                        <input type="text" id="lokasi_jemput" required placeholder="Contoh: Gentasari, Kroya / Jl. Ahmad Yani No. 12, Cilacap" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
-                    <!-- PILIHAN RUTE SPESIFIK -->
+                    <!-- LOKASI TUJUAN SPESIFIK -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1"><i class="fas fa-route text-sky-600 mr-1"></i>Pilih Rute Perjalanan *</label>
-                        <select id="rute_tujuan" onchange="hitungTarif()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white font-semibold text-slate-800">
-                            <option value="250000" data-dp="50000" data-nama="Cilacap / Kroya ➔ Bandung">Cilacap ➔ Bandung (Rp 250.000 / orang)</option>
-                            <option value="250000" data-dp="50000" data-nama="Cilacap / Kroya ➔ Jakarta / Jabodetabek">Cilacap ➔ Jakarta / JABODETABEK (Rp 250.000 / orang)</option>
-                            <option value="180000" data-dp="50000" data-nama="Cilacap / Kroya ➔ Semarang">Cilacap ➔ Semarang (Rp 180.000 / orang)</option>
-                            <option value="180000" data-dp="50000" data-nama="Cilacap / Kroya ➔ Jogja / Solo">Cilacap ➔ Jogja / Solo (Rp 180.000 / orang)</option>
-                            <option value="350000" data-dp="50000" data-nama="Cilacap / Kroya ➔ Surabaya / Malang">Cilacap ➔ Surabaya / Malang (Rp 350.000 / orang)</option>
-                            <option value="450000" data-dp="100000" data-nama="Cilacap / Kroya ➔ Denpasar (Bali)">Cilacap ➔ Denpasar Bali (Rp 450.000 / orang)</option>
-                            <option value="0" data-dp="0" data-nama="Rute Lainnya / Custom">Rute Lain / Hubungi Admin</option>
-                        </select>
+                        <label class="block text-xs font-bold text-slate-700 mb-1"><i class="fas fa-location-dot text-sky-600 mr-1"></i>Alamat / Lokasi Tujuan Spesifik *</label>
+                        <input type="text" id="lokasi_tujuan" required placeholder="Contoh: Jl. Buah Batu No. 45, Bandung / Terminal Kalideres, Jakarta" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
                     <!-- Tanggal Berangkat -->
@@ -157,48 +148,57 @@
                         </select>
                     </div>
 
-                    <!-- Jumlah Penumpang / Barang -->
+                    <!-- Jumlah Penumpang / Kursi -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Orang / Kursi *</label>
-                        <input type="number" id="jumlah" min="1" value="1" onchange="hitungTarif()" onkeyup="hitungTarif()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm font-bold">
+                        <input type="number" id="jumlah" min="1" value="1" onchange="hitungDP()" onkeyup="hitungDP()" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm font-bold">
                     </div>
 
-                    <!-- KOTAK ESTIMASI HARGA & MINIMAL DP -->
+                    <!-- KOTAK ESTIMASI MINIMAL DP & REKENING OWNER -->
                     <div class="md:col-span-2 bg-gradient-to-r from-sky-50 via-sky-100/50 to-orange-50 p-5 rounded-2xl border-2 border-sky-200 mt-2">
                         <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                             <div>
-                                <span class="text-xs text-slate-500 font-semibold block">Total Tarif Tiket (<span id="text-rute-dipilih" class="font-bold text-sky-800">Cilacap ➔ Bandung</span>):</span>
-                                <span id="text-total" class="text-2xl md:text-3xl font-black text-sky-900">Rp 250.000</span>
+                                <span class="text-xs text-orange-600 font-extrabold uppercase tracking-wide block"><i class="fas fa-lock mr-1"></i>Minimal DP Booking (Tanda Jadi):</span>
+                                <span id="text-dp" class="text-2xl md:text-3xl font-black text-orange-600">Rp 50.000</span>
+                                <span class="text-[11px] text-gray-500 block mt-0.5">*Rp 50.000 per orang/kursi untuk mengunci jadwal & armada</span>
                             </div>
-                            <div class="text-right sm:border-l sm:pl-5 border-slate-300">
-                                <span class="text-xs text-orange-600 font-bold block"><i class="fas fa-lock mr-1"></i>Minimal DP Booking (Tanda Jadi):</span>
-                                <span id="text-dp" class="text-xl md:text-2xl font-black text-orange-600">Rp 50.000</span>
+                            <div class="sm:text-right bg-white p-3 rounded-xl border border-sky-200 shadow-sm w-full sm:w-auto">
+                                <span class="text-xs font-bold text-sky-900 block"><i class="fas fa-check-circle text-green-500 mr-1"></i>Status Tarif Travel</span>
+                                <span class="text-xs text-gray-600">Sisa pembayaran / pelunasan dibayar ke Driver saat jemput.</span>
                             </div>
                         </div>
 
-                        <!-- KETERANGAN PEMBAYARAN REKENING -->
+                        <!-- INFO REKENING OWNER LENGKAP -->
                         <div class="mt-4 pt-3 border-t border-sky-200 text-xs text-slate-700">
-                            <p class="font-bold text-sky-900 flex items-center gap-1.5 mb-1">
-                                <i class="fas fa-university text-orangebrand"></i> Pembayaran DP Resmi Ditransfer Ke Rekening EL FAZZA TRANS:
+                            <p class="font-extrabold text-sky-900 flex items-center gap-1.5 mb-2">
+                                <i class="fas fa-university text-orangebrand text-base"></i> TRANSFER DP HANYA KE REKENING OWNER EL FAZZA TRANS:
                             </p>
-                            <div class="bg-white p-3 rounded-xl border border-sky-200 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                <div>
-                                    <p class="font-bold text-slate-800">Bank BRI / BCA / Mandiri</p>
-                                    <p class="text-slate-600 font-mono">No. Rekening: <span class="font-bold text-sky-800">Hubungi Admin WA / Cek Info Rekening</span></p>
-                                    <p class="text-[11px] text-gray-500">Atas Nama: <strong>EL FAZZA TRANS</strong></p>
+                            
+                            <div class="bg-white p-4 rounded-xl border border-sky-200 shadow-sm space-y-2">
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="font-bold text-slate-700">Atas Nama (A/n):</span>
+                                    <span class="font-black text-sky-900">MOCHAMAD HARIS MUNAWIR</span>
                                 </div>
-                                <span class="bg-green-100 text-green-800 text-[11px] font-bold px-2.5 py-1 rounded-full border border-green-200">
-                                    <i class="fas fa-check-circle mr-1"></i>Aman & Terpercaya
-                                </span>
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="font-bold text-slate-700">MANDIRI:</span>
+                                    <span class="font-mono font-extrabold text-slate-900 bg-slate-100 px-2 py-0.5 rounded text-sm">18-000-11-555-648</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="font-bold text-slate-700">DANA / GOPAY:</span>
+                                    <span class="font-mono font-extrabold text-slate-900 bg-slate-100 px-2 py-0.5 rounded text-sm">085-8691-3333-2</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-bold text-slate-700">QRIS:</span>
+                                    <span class="font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded text-xs">DI KIRIM ADMIN VIA WHATSAPP</span>
+                                </div>
                             </div>
-                            <p class="text-[11px] text-gray-500 mt-2 italic">*Sisa pembayaran / pelunasan dapat dibayarkan langsung ke Driver saat penjemputan.</p>
                         </div>
                     </div>
 
                     <!-- Tombol Submit -->
                     <div class="md:col-span-2">
                         <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-base">
-                            <i class="fab fa-whatsapp text-2xl"></i> Pesan Tiket & Minta Rekening DP via WhatsApp
+                            <i class="fab fa-whatsapp text-2xl"></i> Kirim Pesanan via WhatsApp
                         </button>
                     </div>
                 </form>
@@ -206,33 +206,36 @@
         </div>
     </section>
 
-    <!-- SECTION INFORMASI REKENING RESMI -->
+    <!-- SECTION INFORMASI REKENING RESMI OWNER -->
     <section id="rekening" class="py-12 bg-slate-100">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="text-center mb-8">
-                <span class="text-orangebrand font-bold uppercase text-xs tracking-wider">Metode Pembayaran</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-sky-900">REKENING RESMI EL FAZZA TRANS</h2>
-                <p class="text-gray-600 text-sm mt-1">Gunakan hanya rekening berikut untuk transaksi DP / Pembayaran Tanda Jadi</p>
+                <span class="text-orangebrand font-bold uppercase text-xs tracking-wider">Rekening Resmi Pembayaran DP</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-sky-900">REKENING OWNER EL FAZZA TRANS</h2>
+                <p class="text-gray-600 text-sm mt-1">Pembayaran DP tanda jadi sah apabila ditransfer ke rekening di bawah ini:</p>
                 <div class="w-16 h-1 bg-orangebrand mx-auto mt-2 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex items-center justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-sky-600 bg-sky-50 px-2 py-0.5 rounded">BANK BRI</span>
-                        <h3 class="text-lg font-black text-slate-800 mt-1">HUBUNGI ADMIN</h3>
-                        <p class="text-xs text-gray-500">Atas Nama: <strong>EL FAZZA TRANS</strong></p>
-                    </div>
-                    <i class="fas fa-university text-3xl text-sky-600"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- MANDIRI -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-sky-100 text-center">
+                    <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full uppercase">BANK MANDIRI</span>
+                    <h3 class="text-lg font-black font-mono text-slate-900 mt-3">18-000-11-555-648</h3>
+                    <p class="text-xs text-gray-500 mt-1">A/n: <strong>MOCHAMAD HARIS MUNAWIR</strong></p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100 flex items-center justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">DOMPET DIGITAL / QRIS</span>
-                        <h3 class="text-lg font-black text-slate-800 mt-1">DANA / OVO / ShopeePay</h3>
-                        <p class="text-xs text-gray-500">Nomor: <strong>0858-6913-3332</strong></p>
-                    </div>
-                    <i class="fas fa-qrcode text-3xl text-orangebrand"></i>
+                <!-- DANA / GOPAY -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-sky-100 text-center">
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">DANA / GOPAY</span>
+                    <h3 class="text-lg font-black font-mono text-slate-900 mt-3">085-8691-3333-2</h3>
+                    <p class="text-xs text-gray-500 mt-1">A/n: <strong>MOCHAMAD HARIS MUNAWIR</strong></p>
+                </div>
+
+                <!-- QRIS -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-sky-100 text-center">
+                    <span class="text-xs font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full uppercase">QRIS CODE</span>
+                    <h3 class="text-sm font-black text-slate-800 mt-3">MINTA KE ADMIN</h3>
+                    <p class="text-xs text-gray-500 mt-1">Dikirim Admin via WhatsApp</p>
                 </div>
             </div>
         </div>
@@ -257,6 +260,63 @@
                 <div class="p-4 rounded-xl bg-orange-50 border border-orange-200 shadow-sm">
                     <i class="fas fa-box-open text-3xl text-orangebrand mb-2"></i>
                     <h3 class="font-bold text-sm text-slate-800">Kirim Paket Kilat</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Rute Kota Lengkap -->
+    <section id="rute" class="py-12 bg-sky-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-8">
+                <span class="text-orangebrand font-bold uppercase text-xs tracking-wider">Jangkauan Luas</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-sky-900">RUTE KOTA TUJUAN</h2>
+                <div class="w-16 h-1 bg-orangebrand mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Jabodetabek -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+                    <div class="flex items-center gap-3 mb-4 border-b pb-3 border-sky-100">
+                        <i class="fas fa-city text-orangebrand text-xl"></i>
+                        <h3 class="font-bold text-sky-900 text-base">JABODETABEK & JABAR</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Jakarta</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Bogor</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Depok</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Tangerang</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Bekasi</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Bandung</span>
+                    </div>
+                </div>
+
+                <!-- Jateng & DIY -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+                    <div class="flex items-center gap-3 mb-4 border-b pb-3 border-sky-100">
+                        <i class="fas fa-mountain text-orangebrand text-xl"></i>
+                        <h3 class="font-bold text-sky-900 text-base">JAWA TENGAH & DIY</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Cilacap</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Purwokerto</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Semarang</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Jogja</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Solo</span>
+                    </div>
+                </div>
+
+                <!-- Jatim & Bali -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
+                    <div class="flex items-center gap-3 mb-4 border-b pb-3 border-sky-100">
+                        <i class="fas fa-umbrella-beach text-orangebrand text-xl"></i>
+                        <h3 class="font-bold text-sky-900 text-base">JAWA TIMUR & BALI</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Surabaya</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Malang</span>
+                        <span class="bg-sky-50 text-sky-800 text-xs font-semibold px-3 py-1.5 rounded-lg border border-sky-100"><i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Denpasar (Bali)</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -287,29 +347,13 @@
         </div>
     </footer>
 
-    <!-- SCRIPT HITUNG HARGA AUTOMATIS & KIRIM KE WA -->
+    <!-- SCRIPT HITUNG DP AUTOMATIS & KIRIM KE WA -->
     <script>
-        function hitungTarif() {
-            const selectRute = document.getElementById('rute_tujuan');
-            const optionTerpilih = selectRute.options[selectRute.selectedIndex];
-            
-            const hargaPerOrang = parseInt(selectRute.value);
-            const dpPerOrang = parseInt(optionTerpilih.getAttribute('data-dp')) || 50000;
-            const ruteNama = optionTerpilih.getAttribute('data-nama');
+        function hitungDP() {
             const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
-
-            document.getElementById('text-rute-dipilih').innerText = ruteNama;
-
-            if (hargaPerOrang > 0) {
-                const totalHarga = hargaPerOrang * jumlah;
-                const totalDP = dpPerOrang * jumlah;
-                
-                document.getElementById('text-total').innerText = 'Rp ' + totalHarga.toLocaleString('id-ID');
-                document.getElementById('text-dp').innerText = 'Rp ' + totalDP.toLocaleString('id-ID');
-            } else {
-                document.getElementById('text-total').innerText = 'Hubungi Admin';
-                document.getElementById('text-dp').innerText = 'Hubungi Admin';
-            }
+            const minimalDP = 50000 * jumlah;
+            
+            document.getElementById('text-dp').innerText = 'Rp ' + minimalDP.toLocaleString('id-ID');
         }
 
         function kirimFormWA(event) {
@@ -318,39 +362,37 @@
             const nama = document.getElementById('nama').value;
             const layanan = document.getElementById('layanan_tipe').value;
             const jemput = document.getElementById('lokasi_jemput').value;
-            
-            const selectRute = document.getElementById('rute_tujuan');
-            const ruteNama = selectRute.options[selectRute.selectedIndex].getAttribute('data-nama');
-            
+            const tujuan = document.getElementById('lokasi_tujuan').value;
             const tanggal = document.getElementById('tanggal').value;
             const jam = document.getElementById('jam').value;
             const armada = document.getElementById('armada_pilihan').value;
             const jumlah = document.getElementById('jumlah').value;
-
-            const total = document.getElementById('text-total').innerText;
             const dp = document.getElementById('text-dp').innerText;
 
-            const pesan = `Halo EL FAZZA TRANS, saya mau order tiket travel via Website:%0A%0A` +
+            const pesan = `Halo EL FAZZA TRANS, saya mau booking tiket travel via Website:%0A%0A` +
                           `*Nama Pemesan:* ${nama}%0A` +
                           `*Layanan:* ${layanan}%0A` +
-                          `*Alamat Jemput:* ${jemput}%0A` +
-                          `*Rute Perjalanan:* ${ruteNama}%0A` +
+                          `*Alamat Penjemputan Spesifik:* ${jemput}%0A` +
+                          `*Alamat Tujuan Spesifik:* ${tujuan}%0A` +
                           `*Tanggal Keberangkatan:* ${tanggal}%0A` +
                           `*Jam Keberangkatan:* ${jam}%0A` +
                           `*Pilihan Mobil:* ${armada}%0A` +
                           `*Jumlah Orang/Kursi:* ${jumlah}%0A%0A` +
                           `----------------------------------%0A` +
-                          `*Total Tarif Tiket:* ${total}%0A` +
-                          `*Minimal DP Booking:* ${dp}%0A` +
+                          `*Minimal DP Tanda Jadi:* ${dp}%0A` +
+                          `*Transfer Ke Rekening OWNER:*%0A` +
+                          `• Mandiri: 18-000-11-555-648%0A` +
+                          `• DANA/GOPAY: 085-8691-3333-2%0A` +
+                          `• A/n: MOCHAMAD HARIS MUNAWIR%0A` +
                           `----------------------------------%0A` +
-                          `Mohon kirimkan nomor rekening resmi *EL FAZZA TRANS* untuk pembayaran DP tanda jadi. Terima kasih!`;
+                          `Mohon konfirmasi ketersediaan armada & tarif resmi untuk rute tersebut. Terima kasih!`;
 
             window.open(`https://wa.me/6285869133332?text=${pesan}`, '_blank');
         }
 
-        // Jalankan hitungTarif pertama kali saat halaman dimuat
+        // Jalankan hitungDP pertama kali saat halaman dimuat
         document.addEventListener("DOMContentLoaded", function() {
-            hitungTarif();
+            hitungDP();
         });
     </script>
 </body>
