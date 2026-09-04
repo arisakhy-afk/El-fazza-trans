@@ -21,6 +21,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
+    <!-- Tombol Pesan Melayang (Floating WA) -->
     <a href="https://wa.me/6285869133332?text=Halo%20EL%20FAZZA%20TRANS,%20saya%20ingin%20pesan%20travel" 
        target="_blank" 
        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-3 rounded-full shadow-2xl flex items-center gap-3 transition-transform hover:scale-105 animate-bounce">
@@ -28,6 +29,7 @@
         <span class="text-sm hidden sm:inline">Pesan Via WhatsApp</span>
     </a>
 
+    <!-- Header / Navbar -->
     <header class="bg-sky-600 text-white sticky top-0 z-40 shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
@@ -49,32 +51,28 @@
         </div>
     </header>
 
-    <section id="beranda" class="bg-gradient-to-b from-sky-600 to-sky-500 text-white py-12 md:py-16 px-4">
-        <div class="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-                <span class="bg-orangebrand text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Layanan Transportasi Door To Door</span>
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">EL FAZZA TRANS Cilacap</h1>
-                <p class="text-sky-100 text-base md:text-lg mb-6 font-medium">TRAVEL • CARTER (PP) • WISATA • KIRIM PAKET KILAT</p>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <a href="#pesan-tiket" class="bg-orangebrand hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg text-center transition flex items-center justify-center gap-2">
-                        <i class="fas fa-ticket-alt"></i> Isi Form Pemesanan
-                    </a>
-                    <a href="#rute" class="bg-white text-sky-700 hover:bg-sky-50 font-bold px-6 py-3 rounded-xl shadow text-center transition">
-                        Cek Rute Tujuan
-                    </a>
-                </div>
+    <!-- BANNER HERO UTAMA (Paling Atas Saat Link Dibuka) -->
+    <section id="beranda" class="bg-sky-600 pt-3 pb-6 px-2 md:px-4">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Tampilan Gambar Banner Utama -->
+            <div class="overflow-hidden rounded-2xl md:rounded-3xl shadow-2xl border-2 md:border-4 border-white bg-white">
+                <img src="banner-hero.png" alt="EL FAZZA TRANS - Rute & Layanan Travel" class="w-full h-auto object-cover block">
             </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Armada EL FAZZA TRANS" class="rounded-2xl shadow-2xl border-4 border-white object-cover w-full h-64 md:h-80">
-                <div class="absolute -bottom-4 -left-2 md:bottom-4 md:-left-4 bg-white text-slate-800 p-3 rounded-xl shadow-lg border-l-4 border-orangebrand">
-                    <p class="text-xs font-bold text-gray-500">Antar Jemput Sampai Depan Rumah</p>
-                    <p class="text-sm font-bold text-sky-600">Door To Door Service</p>
-                </div>
+
+            <!-- Tombol Aksi Cepat Di Bawah Banner -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
+                <a href="#pesan-tiket" class="w-full sm:w-auto bg-orangebrand hover:bg-orange-600 text-white font-black px-8 py-3.5 rounded-xl shadow-lg text-center transition flex items-center justify-center gap-2 text-sm md:text-base">
+                    <i class="fas fa-edit"></i> Isi Form Pemesanan Sekarang
+                </a>
+                <a href="https://wa.me/6285869133332?text=Halo%20EL%20FAZZA%20TRANS,%20saya%20ingin%20pesan%20travel" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3.5 rounded-xl shadow text-center transition flex items-center justify-center gap-2 text-sm md:text-base">
+                    <i class="fab fa-whatsapp text-lg"></i> Chat Admin WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="pesan-tiket" class="py-12 bg-white relative -mt-6 z-30">
+    <!-- FORMULIR PEMESANAN INTERAKTIF -->
+    <section id="pesan-tiket" class="py-10 bg-slate-50">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-sky-100">
                 <div class="text-center mb-6">
@@ -84,16 +82,19 @@
                 </div>
 
                 <form id="formTravel" onsubmit="kirimFormWA(event)" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Nama Lengkap -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pemesan *</label>
                         <input type="text" id="nama" required placeholder="Masukkan nama lengkap Anda" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
+                    <!-- Nomor HP / WhatsApp -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Nomor WhatsApp / HP *</label>
                         <input type="tel" id="nohp" required placeholder="Contoh: 081234567890" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
+                    <!-- Pilihan Layanan -->
                     <div class="md:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">Jenis Layanan *</label>
                         <select id="layanan_tipe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
@@ -104,6 +105,7 @@
                         </select>
                     </div>
 
+                    <!-- Lokasi Penjemputan Spesifik -->
                     <div class="md:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">
                             <i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Alamat Penjemputan Spesifik *
@@ -111,6 +113,7 @@
                         <textarea id="jemput_spesifik" required rows="2" placeholder="Nama Jalan, No. Rumah, RT/RW, Desa/Kelurahan, Kecamatan, Kota & Patokan Lokasi (Contoh: Jl. Manggis No. 12 RT 02/03, Gentasari, Kroya - Dekat Masjid Al-Ikhlas)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm"></textarea>
                     </div>
 
+                    <!-- Lokasi Tujuan Spesifik -->
                     <div class="md:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">
                             <i class="fas fa-location-arrow text-sky-600 mr-1"></i>Alamat Tujuan Spesifik *
@@ -118,11 +121,13 @@
                         <textarea id="tujuan_spesifik" required rows="2" placeholder="Nama Jalan, No. Rumah, Perumahan, RT/RW, Kecamatan, Kota Tujuan (Contoh: Perum Harapan Indah Blok B3 No. 5, Pejuang, Medan Satria, Bekasi)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm"></textarea>
                     </div>
 
+                    <!-- Tanggal Berangkat -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Tanggal Keberangkatan *</label>
                         <input type="date" id="tanggal" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
                     </div>
 
+                    <!-- Jam Keberangkatan -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Pilihan Jam Keberangkatan</label>
                         <select id="jam" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
@@ -133,6 +138,7 @@
                         </select>
                     </div>
 
+                    <!-- Pilihan Armada -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Pilihan Mobil / Armada</label>
                         <select id="armada_pilihan" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
@@ -147,11 +153,13 @@
                         </select>
                     </div>
 
+                    <!-- Jumlah Penumpang / Barang -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Orang / Paket</label>
                         <input type="number" id="jumlah" min="1" value="1" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
+                    <!-- BLOK INFORMASI REKENING DP / TANDA JADI -->
                     <div id="pembayaran" class="md:col-span-2 mt-4 bg-gradient-to-br from-amber-50 to-orange-50 border border-orange-200 p-5 rounded-2xl">
                         <div class="flex items-center gap-2 mb-3">
                             <i class="fas fa-university text-orangebrand text-xl"></i>
@@ -181,6 +189,7 @@
                         </div>
                     </div>
 
+                    <!-- Tombol Submit -->
                     <div class="md:col-span-2 mt-2">
                         <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-base">
                             <i class="fab fa-whatsapp text-2xl"></i> Kirim Pemesanan via WhatsApp
@@ -191,18 +200,19 @@
         </div>
     </section>
 
-    <section id="layanan" class="py-10 bg-slate-50 border-b">
+    <!-- Ringkasan Layanan Kami -->
+    <section id="layanan" class="py-10 bg-white border-b">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div class="p-4 rounded-xl bg-white border border-sky-100 shadow-sm">
+                <div class="p-4 rounded-xl bg-sky-50 border border-sky-100 shadow-sm">
                     <i class="fas fa-route text-3xl text-orangebrand mb-2"></i>
                     <h3 class="font-bold text-sm text-slate-800">Travel Reguler</h3>
                 </div>
-                <div class="p-4 rounded-xl bg-white border border-sky-100 shadow-sm">
+                <div class="p-4 rounded-xl bg-sky-50 border border-sky-100 shadow-sm">
                     <i class="fas fa-car text-3xl text-orangebrand mb-2"></i>
                     <h3 class="font-bold text-sm text-slate-800">Carter Mobil (PP)</h3>
                 </div>
-                <div class="p-4 rounded-xl bg-white border border-sky-100 shadow-sm">
+                <div class="p-4 rounded-xl bg-sky-50 border border-sky-100 shadow-sm">
                     <i class="fas fa-bus text-3xl text-orangebrand mb-2"></i>
                     <h3 class="font-bold text-sm text-slate-800">Paket Wisata</h3>
                 </div>
@@ -214,6 +224,7 @@
         </div>
     </section>
 
+    <!-- SECTION RUTE KOTA TUJUAN LENGKAP -->
     <section id="rute" class="py-12 bg-sky-50">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-8">
@@ -224,6 +235,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Jabodetabek & Jabar -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
                     <div class="flex items-center gap-3 mb-4 border-b pb-3 border-sky-100">
                         <i class="fas fa-city text-orangebrand text-xl"></i>
@@ -247,6 +259,7 @@
                     </div>
                 </div>
 
+                <!-- Jawa Tengah & DIY -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
                     <div class="flex items-center gap-3 mb-4 border-b pb-3 border-sky-100">
                         <i class="fas fa-mountain text-orangebrand text-xl"></i>
@@ -283,6 +296,7 @@
                     </div>
                 </div>
 
+                <!-- Jawa Timur & Bali -->
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-sky-100">
                     <div class="flex items-center gap-3 mb-4 border-b pb-3 border-sky-100">
                         <i class="fas fa-umbrella-beach text-orangebrand text-xl"></i>
@@ -298,6 +312,7 @@
         </div>
     </section>
 
+    <!-- Section Pilihan Armada Lengkap -->
     <section id="armada" class="py-12 bg-white">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-10">
@@ -307,6 +322,7 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Daihatsu Sigra -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                     <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Sigra" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -319,6 +335,7 @@
                     </div>
                 </div>
 
+                <!-- 2. Daihatsu Luxio -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                     <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Luxio" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -331,6 +348,7 @@
                     </div>
                 </div>
 
+                <!-- 3. Daihatsu Granmax -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                     <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Granmax" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -343,6 +361,7 @@
                     </div>
                 </div>
 
+                <!-- 4. Toyota Avanza -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                     <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Toyota Avanza" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -355,6 +374,7 @@
                     </div>
                 </div>
 
+                <!-- 5. Toyota Hiace -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                     <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Toyota Hiace" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -367,6 +387,7 @@
                     </div>
                 </div>
 
+                <!-- 6. Isuzu Elf Short -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
                     <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Isuzu Elf Short" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -379,6 +400,7 @@
                     </div>
                 </div>
 
+                <!-- 7. Isuzu Elf Long -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition sm:col-span-2 lg:col-span-1">
                     <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Isuzu Elf Long" class="w-full h-48 object-cover">
                     <div class="p-5">
@@ -394,6 +416,7 @@
         </div>
     </section>
 
+    <!-- Footer / Informasi Kontak & Alamat -->
     <footer id="kontak" class="bg-sky-900 text-white py-12">
         <div class="container mx-auto px-4 max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -425,6 +448,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT SKRIP OTOMATIS KE WHATSAPP -->
     <script>
         function kirimFormWA(event) {
             event.preventDefault();
