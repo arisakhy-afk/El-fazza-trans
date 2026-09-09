@@ -3,7 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL FAZZA TRANS - Travel, Carter & Wisata Cilacap</title>
+    
+    <!-- ==================== META SEO UTAMA ==================== -->
+    <title>EL FAZZA TRANS - Travel Door to Door, Carter Mobil & Wisata Cilacap</title>
+    <meta name="title" content="EL FAZZA TRANS - Travel Door to Door, Carter Mobil & Wisata Cilacap">
+    <meta name="description" content="Layanan jasa travel door to door, carter mobil, paket wisata, dan kirim paket kilat resmi EL FAZZA TRANS. Melayani rute Cilacap, Kroya, Gentasari ke Jabodetabek, Bandung, Semarang, Jogja, Surabaya, hingga Bali. Hubungi WhatsApp: 0858-6913-3332.">
+    <meta name="keywords" content="travel cilacap, travel kroya, travel gentasari, carter mobil cilacap, travel cilacap jakarta, travel cilacap bandung, travel cilacap semarang, travel cilacap jogja, el fazza trans, sewa mobil kroya, kirim paket kilat cilacap">
+    <meta name="author" content="EL FAZZA TRANS">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://elfazzatrans.com/">
+
+    <!-- ==================== OPEN GRAPH / FACEBOOK / WHATSAPP ==================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elfazzatrans.com/">
+    <meta property="og:title" content="EL FAZZA TRANS - Travel Door to Door, Carter Mobil & Wisata Cilacap">
+    <meta property="og:description" content="Pesan travel door to door, carter armada & paket kilat mudah dan terpercaya. Rute lengkap Jawa, Bali, dan Jabodetabek. Konsultasi & Pesan via WA: 0858-6913-3332.">
+    <meta property="og:image" content="https://elfazzatrans.com/banner-hero.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="EL FAZZA TRANS">
+
+    <!-- ==================== TWITTER CARD ==================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://elfazzatrans.com/">
+    <meta name="twitter:title" content="EL FAZZA TRANS - Travel Door to Door, Carter Mobil & Wisata Cilacap">
+    <meta name="twitter:description" content="Jasa travel door to door, carter mobil, paket wisata & ekspedisi kilat terpercaya Cilacap - Jawa - Bali - Jabodetabek.">
+    <meta name="twitter:image" content="https://elfazzatrans.com/banner-hero.png">
+
+    <!-- ==================== SCHEMA STRUCTURED DATA GOOGLE (JSON-LD) ==================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "EL FAZZA TRANS",
+      "image": "https://elfazzatrans.com/banner-hero.png",
+      "@id": "https://elfazzatrans.com/#organization",
+      "url": "https://elfazzatrans.com/",
+      "telephone": "+6285869133332",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dusun Gunung Nangka, Desa Gentasari, RT.08/05",
+        "addressLocality": "Kroya",
+        "addressRegion": "Cilacap",
+        "postalCode": "53282",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.6321,
+        "longitude": 109.2512
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://wa.me/6285869133332"
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS & FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -51,15 +122,13 @@
         </div>
     </header>
 
-    <!-- BANNER HERO UTAMA (Paling Atas Saat Link Dibuka) -->
+    <!-- BANNER HERO UTAMA -->
     <section id="beranda" class="bg-sky-600 pt-3 pb-6 px-2 md:px-4">
         <div class="container mx-auto max-w-6xl">
-            <!-- Tampilan Gambar Banner Utama -->
             <div class="overflow-hidden rounded-2xl md:rounded-3xl shadow-2xl border-2 md:border-4 border-white bg-white">
-                <img src="banner-hero.png" alt="EL FAZZA TRANS - Rute & Layanan Travel" class="w-full h-auto object-cover block">
+                <img src="banner-hero.png" alt="EL FAZZA TRANS - Rute & Layanan Travel Door to Door Cilacap" class="w-full h-auto object-cover block">
             </div>
 
-            <!-- Tombol Aksi Cepat Di Bawah Banner -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
                 <a href="#pesan-tiket" class="w-full sm:w-auto bg-orangebrand hover:bg-orange-600 text-white font-black px-8 py-3.5 rounded-xl shadow-lg text-center transition flex items-center justify-center gap-2 text-sm md:text-base">
                     <i class="fas fa-edit"></i> Isi Form Pemesanan Sekarang
@@ -82,19 +151,16 @@
                 </div>
 
                 <form id="formTravel" onsubmit="kirimFormWA(event)" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Nama Lengkap -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pemesan *</label>
                         <input type="text" id="nama" required placeholder="Masukkan nama lengkap Anda" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
-                    <!-- Nomor HP / WhatsApp -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Nomor WhatsApp / HP *</label>
                         <input type="tel" id="nohp" required placeholder="Contoh: 081234567890" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
-                    <!-- Pilihan Layanan -->
                     <div class="md:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">Jenis Layanan *</label>
                         <select id="layanan_tipe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
@@ -105,7 +171,6 @@
                         </select>
                     </div>
 
-                    <!-- Lokasi Penjemputan Spesifik -->
                     <div class="md:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">
                             <i class="fas fa-map-marker-alt text-orangebrand mr-1"></i>Alamat Penjemputan Spesifik *
@@ -113,7 +178,6 @@
                         <textarea id="jemput_spesifik" required rows="2" placeholder="Nama Jalan, No. Rumah, RT/RW, Desa/Kelurahan, Kecamatan, Kota & Patokan Lokasi (Contoh: Jl. Manggis No. 12 RT 02/03, Gentasari, Kroya - Dekat Masjid Al-Ikhlas)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm"></textarea>
                     </div>
 
-                    <!-- Lokasi Tujuan Spesifik -->
                     <div class="md:col-span-2">
                         <label class="block text-xs font-bold text-slate-700 mb-1">
                             <i class="fas fa-location-arrow text-sky-600 mr-1"></i>Alamat Tujuan Spesifik *
@@ -121,13 +185,11 @@
                         <textarea id="tujuan_spesifik" required rows="2" placeholder="Nama Jalan, No. Rumah, Perumahan, RT/RW, Kecamatan, Kota Tujuan (Contoh: Perum Harapan Indah Blok B3 No. 5, Pejuang, Medan Satria, Bekasi)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm"></textarea>
                     </div>
 
-                    <!-- Tanggal Berangkat -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Tanggal Keberangkatan *</label>
                         <input type="date" id="tanggal" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
                     </div>
 
-                    <!-- Jam Keberangkatan -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Pilihan Jam Keberangkatan</label>
                         <select id="jam" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
@@ -138,7 +200,6 @@
                         </select>
                     </div>
 
-                    <!-- Pilihan Armada -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Pilihan Mobil / Armada</label>
                         <select id="armada_pilihan" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm bg-white">
@@ -153,13 +214,12 @@
                         </select>
                     </div>
 
-                    <!-- Jumlah Penumpang / Barang -->
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Orang / Paket</label>
                         <input type="number" id="jumlah" min="1" value="1" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
                     </div>
 
-                    <!-- BLOK INFORMASI REKENING DP / TANDA JADI -->
+                    <!-- BLOK REKENING OWNER -->
                     <div id="pembayaran" class="md:col-span-2 mt-4 bg-gradient-to-br from-amber-50 to-orange-50 border border-orange-200 p-5 rounded-2xl">
                         <div class="flex items-center gap-2 mb-3">
                             <i class="fas fa-university text-orangebrand text-xl"></i>
@@ -189,7 +249,6 @@
                         </div>
                     </div>
 
-                    <!-- Tombol Submit -->
                     <div class="md:col-span-2 mt-2">
                         <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-base">
                             <i class="fab fa-whatsapp text-2xl"></i> Kirim Pemesanan via WhatsApp
@@ -312,7 +371,7 @@
         </div>
     </section>
 
-    <!-- Section Pilihan Armada Lengkap -->
+    <!-- Section Pilihan Armada -->
     <section id="armada" class="py-12 bg-white">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-10">
@@ -324,7 +383,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- 1. Daihatsu Sigra -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Sigra" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Sigra - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Daihatsu Sigra</h3>
@@ -337,7 +396,7 @@
 
                 <!-- 2. Daihatsu Luxio -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Luxio" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Luxio - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Daihatsu Luxio</h3>
@@ -350,7 +409,7 @@
 
                 <!-- 3. Daihatsu Granmax -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Granmax" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Daihatsu Granmax - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Daihatsu Granmax</h3>
@@ -363,7 +422,7 @@
 
                 <!-- 4. Toyota Avanza -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Toyota Avanza" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Toyota Avanza - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Toyota Avanza</h3>
@@ -376,7 +435,7 @@
 
                 <!-- 5. Toyota Hiace -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Toyota Hiace" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Toyota Hiace - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Toyota Hiace</h3>
@@ -389,7 +448,7 @@
 
                 <!-- 6. Isuzu Elf Short -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Isuzu Elf Short" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Isuzu Elf Short - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Isuzu Elf Short</h3>
@@ -402,7 +461,7 @@
 
                 <!-- 7. Isuzu Elf Long -->
                 <div class="rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition sm:col-span-2 lg:col-span-1">
-                    <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Isuzu Elf Long" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=600&q=80" alt="Isuzu Elf Long - EL FAZZA TRANS Travel Cilacap" class="w-full h-48 object-cover">
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="font-bold text-lg text-slate-800">Isuzu Elf Long</h3>
